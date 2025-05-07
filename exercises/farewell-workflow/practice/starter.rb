@@ -12,7 +12,7 @@ client = Temporalio::Client.connect('localhost:7233', 'default')
 puts 'Executing workflow'
 result = client.execute_workflow(
   GreetingFarewell::GreetSomeoneWorkflow,
-  first_arg = ARGV[0],
+  ARGV[0],
   id: 'greeting-workflow',
   task_queue: 'greeting-tasks'
 )

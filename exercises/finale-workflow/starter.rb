@@ -12,7 +12,7 @@ client = Temporalio::Client.connect('localhost:7233', 'default')
 puts 'Executing workflow'
 result = client.execute_workflow(
   CertificateGenerator::CertificateGeneratorWorkflow,
-  first_arg = ARGV[0],
+  ARGV[0],
   id: 'generate-certificate-workflow',
   task_queue: 'generate-certificate-taskqueue'
 )
