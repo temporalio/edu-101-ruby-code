@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'temporalio/workflow'
-require_relative 'translation_activities'
+require_relative 'activities' # This file isn't included as this is a sample
 
 class GreetSomeone < Temporalio::Workflow::Definition
   def execute(name)

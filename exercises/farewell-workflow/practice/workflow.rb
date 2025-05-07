@@ -3,7 +3,7 @@
 require 'temporalio/workflow'
 require_relative 'activities'
 
-class GreetSomeoneWorkflow < Temporalio::Workflow::Definition
+class GreetSomeone < Temporalio::Workflow::Definition
   def execute(name)
     greeting = Temporalio::Workflow.execute_activity(
       GreetInSpanish,
