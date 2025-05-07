@@ -14,7 +14,7 @@ client = Temporalio::Client.connect(
 worker = Temporalio::Worker.new(
   client:,
   task_queue: 'TODO',
-  workflows: [GreetSomeone::GreetingWorkflow]
+  workflows: [GreetSomeone]
 )
 
 # Run the worker until SIGINT
