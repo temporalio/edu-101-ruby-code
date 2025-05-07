@@ -14,6 +14,6 @@ class GreetSomeoneWorkflow < Temporalio::Workflow::Definition
     # TODO: Part C: Implement the call to the Activity that calls the `get-spanish-farewell` endpoint
 
     # TODO: Part C: Update this statement to include the result of both Activities
-    greeting.to_s
+    "#{greeting}"
   end
 end
