@@ -3,15 +3,13 @@
 require 'temporalio/client'
 require_relative 'workflow'
 
-all_args = ARGV
-
 # Create a client
 client = Temporalio::Client.connect('localhost:7233', 'default')
 
 # Run workflow
 puts 'Executing workflow'
 result = client.execute_workflow(
-  CertificateGenerator::CertificateGeneratorWorkflow,
+  CertificateGenerator,
   ARGV[0],
   id: 'generate-certificate-workflow',
   task_queue: 'generate-certificate-taskqueue'

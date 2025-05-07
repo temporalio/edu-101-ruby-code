@@ -1,22 +1,22 @@
 require 'temporalio/workflow'
 require_relative 'activities'
 
-module GreetingFarewell
-  class GreetSomeoneWorkflow < Temporalio::Workflow::Definition
-    def execute(name)
-      greeting = Temporalio::Workflow.execute_activity(
-        GreetingFarewell::GreetInSpanishActivity,
-        name,
-        start_to_close_timeout: 5
-      )
 
-      farewell = Temporalio::Workflow.execute_activity(
-        GreetingFarewell::FarewellInSpanishActivity,
-        name,
-        start_to_close_timeout: 5
-      )
+class GreetSomeone < Temporalio::Workflow::Definition
+  def execute(name)
+    greeting = Temporalio::Workflow.execute_activity(
+      GreetInSpanish,
+      name,
+      start_to_close_timeout: 5
+    )
 
-      "#{greeting}\n#{farewell}"
-    end
+    farewell = Temporalio::Workflow.execute_activity(
+      FarewellInSpanish,
+      name,
+      start_to_close_timeout: 5
+    )
+
+    "#{greeting}\n#{farewell}"
   end
 end
+

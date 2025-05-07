@@ -14,7 +14,7 @@ client = Temporalio::Client.connect(
 worker = Temporalio::Worker.new(
   client:,
   task_queue: 'generate-certificate-taskqueue',
-  workflows: [CertificateGenerator::CertificateGeneratorWorkflow]
+  workflows: [CertificateGenerator]
 )
 
 # Run the worker until SIGINT

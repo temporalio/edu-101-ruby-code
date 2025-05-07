@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'workflow'
+require_relative 'activities'
 require 'temporalio/client'
 require 'temporalio/worker'
 
@@ -14,9 +15,9 @@ client = Temporalio::Client.connect(
 worker = Temporalio::Worker.new(
   client:,
   task_queue: 'greeting-tasks',
-  workflows: [GreetingFarewell::GreetSomeoneWorkflow],
+  workflows: [GreetSomeone],
   # TODO: Part B: Add Activity registration here
-  activities: [GreetingFarewell::GreetInSpanishActivity]
+  activities: [GreetInSpanish]
 )
 
 # Run the worker until SIGINT
