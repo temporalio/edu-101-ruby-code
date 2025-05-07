@@ -1,8 +1,8 @@
-require_relative 'workflow'
+require_relative 'greeting'
 
 def run(name)
   greeter = GreetSomeone.new
-  greeting = greeter.run(name)
+  greeting = greeter.execute(name)
   puts greeting
 end
 

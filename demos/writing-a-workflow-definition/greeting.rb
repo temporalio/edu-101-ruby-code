@@ -1,5 +1,5 @@
 class GreetSomeone
-    def run(name)
+    def execute(name)
       "Hello #{name}!"
     end
   end
