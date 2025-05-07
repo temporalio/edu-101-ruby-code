@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'temporalio/workflow'
 require_relative 'activities'
-
 
 class GreetSomeoneWorkflow < Temporalio::Workflow::Definition
   def execute(name)
@@ -13,7 +14,6 @@ class GreetSomeoneWorkflow < Temporalio::Workflow::Definition
     # TODO: Part C: Implement the call to the Activity that calls the `get-spanish-farewell` endpoint
 
     # TODO: Part C: Update this statement to include the result of both Activities
-    "#{greeting}"
+    greeting.to_s
   end
 end
-

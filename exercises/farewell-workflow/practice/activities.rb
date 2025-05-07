@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'temporalio/activity'
 require 'net/http'
-
 
 class GreetInSpanish < Temporalio::Activity::Definition
   def execute(name)
@@ -8,7 +9,7 @@ class GreetInSpanish < Temporalio::Activity::Definition
   end
 end
 
-# TODO: Part A: Add the Class and execute method for calliong the `get-spanish-farewell`
+# TODO: Part A: Add the Class and execute method for calling the `get-spanish-farewell`
 # endpoint
 
 # Utility method for making calls to the microservices
@@ -18,4 +19,3 @@ def self.call_service(stem, name)
   response = Net::HTTP.get_response(URI(url))
   response.body
 end
-

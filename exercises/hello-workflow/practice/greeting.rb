@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'temporalio/workflow'
 
 class GreetSomeone < Temporalio::Workflow::Definition
@@ -5,4 +7,3 @@ class GreetSomeone < Temporalio::Workflow::Definition
     "Hello #{name}"
   end
 end
-

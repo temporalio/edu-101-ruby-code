@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require 'temporalio/workflow'
 require_relative 'activities'
-
 
 class GreetSomeone < Temporalio::Workflow::Definition
   def execute(name)
@@ -19,4 +20,3 @@ class GreetSomeone < Temporalio::Workflow::Definition
     "#{greeting}\n#{farewell}"
   end
 end
-

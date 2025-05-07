@@ -3,7 +3,6 @@
 require 'temporalio/client'
 require_relative 'workflow'
 
-
 # Create a client
 client = Temporalio::Client.connect('localhost:7233', 'default')
 

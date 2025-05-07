@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'temporalio/workflow'
 require_relative 'activities'
 
@@ -10,4 +12,3 @@ class GreetSomeone < Temporalio::Workflow::Definition
     )
   end
 end
-
