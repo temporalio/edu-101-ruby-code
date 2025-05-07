@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 # gem "rails"
 
-gem 'temporalio', '~> 0.4.0'
+gem 'temporalio'
 
 gem 'sinatra', '~> 4.1'
 
