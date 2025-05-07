@@ -2,7 +2,7 @@ require_relative 'greeting'
 
 def run(name)
   greeter = GreetSomeone.new
-  greeting = greeter.execute(name)
+  greeting = greeter.run(name)
   puts greeting
 end
 
