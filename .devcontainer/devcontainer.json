@@ -1,5 +1,5 @@
 {
-    "image": "temporalio/gitpod-edu:1.4",
+    "image": "temporalio/gitpod-edu:1.5",
     "customizations": {
         "codespaces": {
             "openFiles": [
