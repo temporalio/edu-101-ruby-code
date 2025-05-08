@@ -26,7 +26,7 @@ This file also contains a utility method (`call_service`) that the Activity uses
 
 ## Part C: Modify the Workflow to Execute Your New Activity
 1. Open the `workflow.rb` file (located in the `practice` subdirectory) in the editor
-2. Look for the TODO messages and implement the call to the Activity you implemented, as well as update what the Workflow returns
+2. Look for the TODO messages and implement the call to the Activity you implemented, and update what the Workflow returns
 3. Save your changes to this file
 
 
