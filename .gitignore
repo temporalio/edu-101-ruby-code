@@ -9,6 +9,10 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+.DS_STORE
+
+# Temporal Dev DB
+*.db
 
 # Used by dotenv library to load environment variables.
 # .env
